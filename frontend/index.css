@@ -1,0 +1,90 @@
+/* Global styles */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar transition class */
+.sidebar-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-slate-700::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 6px;
+}
+
+.scrollbar-track-slate-800\/50::-webkit-scrollbar-track {
+  background-color: rgba(30, 41, 59, 0.5);
+}
+
+/* Ensure main content doesn't overlap with fixed sidebar */
+.main-content {
+  margin-left: 256px; /* 64 * 4 = 256px for w-64 */
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* When sidebar is collapsed */
+.main-content.sidebar-collapsed {
+  margin-left: 80px; /* 20 * 4 = 80px for w-20 */
+}
+
+/* Responsive margin for collapsed sidebar */
+@media (max-width: 767px) {
+  .main-content {
+    margin-left: 64px; /* w-16 trên mobile */
+  }
+  .main-content.sidebar-collapsed {
+    margin-left: 64px;
+  }
+  .user-main-content {
+    margin-left: 64px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    margin-left: 256px;
+  }
+  .main-content.sidebar-collapsed {
+    margin-left: 96px;
+  }
+  .user-main-content {
+    margin-left: 256px;
+  }
+  .user-main-content.sidebar-collapsed {
+    margin-left: 96px;
+  }
+}
+
+/* Main content margin for fixed sidebar (UserPage) */
+.user-main-content {
+  margin-left: 256px; /* 64 * 4 = 256px cho w-64 */
+  transition: margin-left 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .user-main-content {
+    margin-left: 80px; /* 20 * 4 = 80px cho w-20 trên mobile */
+  }
+}
+
+@media (min-width: 768px) {
+  .user-main-content {
+    margin-left: 256px; /* 64 * 4 = 256px cho w-64 trên desktop */
+  }
+}
+
+.user-main-content.sidebar-collapsed {
+  margin-left: 80px; /* 20 * 4 = 80px cho w-20 */
+}
+
+@media (min-width: 768px) {
+  .user-main-content.sidebar-collapsed {
+    margin-left: 96px; /* 24 * 4 = 96px cho md:w-24 */
+  }
+} 

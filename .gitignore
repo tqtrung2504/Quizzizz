@@ -1,0 +1,41 @@
+# ====== Node / React ======
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.production
+.env.development
+
+# ====== Java / Spring Boot / Maven ======
+target/
+*.class
+*.jar
+*.war
+*.log
+
+# ====== IDE ======
+.vscode/
+.idea/
+*.iml
+
+# ====== OS ======
+.DS_Store
+Thumbs.db
+
+# ====== Secrets / Keys ======
+*.key
+*.pem
+*serviceAccount*
+*.json
+
+# ====== Misc ======
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+target/
+backend/target/
+node_modules/
+.env
+*.json
+*serviceAccount*
